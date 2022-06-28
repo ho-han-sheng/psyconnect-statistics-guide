@@ -22,7 +22,8 @@
     \usepackage{graphicx}
     \usepackage[english]{babel}
     \usepackage{tikz}
-    \usepackage{amsmath,amssymb}
+    \usepackage[tbtags]{amsmath}
+    \usepackage{amssymb, amsthm}
     \usepackage{stackengine}
     \usepackage{stix2}
     \usepackage{stix}
@@ -35,6 +36,7 @@
     \usepackage{csquotes}
     \usepackage{indentfirst}
     \usepackage{mathtools}
+    \usepackage{bm}
     \usepackage{hyperref}
     
     \addbibresource{bibliography.bib}
@@ -85,7 +87,7 @@
     \title{\Huge \textbf{PsyConnect Statistics Guide}  \\ \huge v0.1}
     % Author
     \author{\textsc{\underline{Ho} Han Sheng}\thanks{\url{https://github.com/ho-han-sheng}}}
-    \date{published date}
+    \date{\today}
     
     \begin{document}
     
@@ -128,7 +130,7 @@
     The website\footnote{\url{https://github.com/ho-han-sheng/psyconnect-statistics-guide}} for this file contains:
     \begin{itemize}
       \item The (freely downlodable) latest version of this document.
-      \item The LaTeX source code for this document.
+      \item The \LaTeX{} source code for this document.
       \item A way to propose amendments through pull requests.
     \end{itemize}
     
@@ -386,10 +388,10 @@
     \emph{\ref{eqn:index law seven}}. The result of the multiplication of 2 numbers with different bases but with the same index is equal to the multiple of both bases raised to the same power. 
     
     \begin{equation}\label{eqn:index law eight}
-        a^m / b^m = \frac{a^m}{b^m} = \bigg(\frac{a}{b}\bigg)^m
+        a^m / b^m = \frac{a^m}{b^m} = \left(\frac{a}{b}\right)^m
     \end{equation}
     
-    \[ \frac{2^5}{3^5} = \bigg(\frac{2}{3}\bigg)^5 = \frac{32}{243} \]
+    \[ \frac{2^5}{3^5} = \left(\frac{2}{3}\right)^5 = \frac{32}{243} \]
     
     \emph{\ref{eqn:index law eight}}. The division of 2 numbers with different bases but with the same index yields a result equal to the fraction (or division) of the two bases raised to the same power. 
     
@@ -600,7 +602,7 @@
     
     \medskip
     
-    Given:
+    For example:
     \begin{align*}
     4x(x-2) - 8x + 1 &= 4x^2 - 8x - 8x + 1 \\
     &= 4x^2 + 1
@@ -616,14 +618,6 @@
     \xrightleftharpoons[Factorisation]{Expansion}
     4x + 8y\]
     
-    For example:
-    
-    \begin{align*}
-        6x^3y^3 + 45x^2y^2 + 21xy = (3xy)(2x^2y^2 + 15xy +7)
-    \end{align*}
-    
-    The highest common factor of 6, 45 and 21 is 3. $xy$ may also be factored out, giving us $3xy$ as one factor. 
-    
     \begin{align}\label{eqn:distributive law}
     x \cdot (y+z) &= x \cdot y + x \cdot z \\
     &= xy + xz \nonumber
@@ -631,6 +625,7 @@
     
     \ref{eqn:distributive law}. The \textbf{distributive law} is one of the primary ways we expand expressions, especially with brackets involved. While there exist mnemonics such as FOIL (First, Outer, Inner, Last) to guide us in multiplying terms, they do have special exceptions in which they fail, like multiplying polynomials with more than 2 terms. The distributive law however, can be used to multiply polynomials with any number of terms, albeit tediously. 
     
+    \medskip
     For example:
     \begin{align*}
         (a+b+c+d)(w+x+y+z) = {}& (a)(w+x+y+z) + (b)(w+x+y+z) \\
@@ -661,8 +656,8 @@
     \begin{align*}
     \text{Let} \: X_1 = a,\: X_2 = b, \: X_3 = c {}{}{}{}& \\
     (a-2b+c)^2 = {}& (a - 2b + c)(a - 2b + c) \\
-    =  {}& (a)(a - 2b + c) + (-2b)(a-2b+c) \\
-    & + (c)(a-2b+c) \\
+    =  {}& (a)(a - 2b + c) + (-2b)(a - 2b + c) \\
+    & + (c)(a - 2b + c) \\
     =  {}& a^2 - 2ab + ac - 2ab + 4b^2 - 2bc \\
     & + ac -2bc + c^2 \\
     = {}& a^2 + 4b^2 + c^2 - 4ab + 2ac - 4bc
@@ -670,9 +665,9 @@
     
     \begin{align*}
         E[(X_1 - 2X_2 + X_3)^2] = {}& E[X_1^2 + 4X_2^2 + X_3^2 - 4X_1 X_2 +2X_1 X_3 - 4X_2 X_3] \\
-        = {}& E(X_1^2) + 4 E(X_2^2) + E(X_3^2) - 4E(X_1)E(X_2) \\
-        & + 2E(X_1)E(X_3) - 4E(X_2) E(X_3) \\
-        = {}& \frac{1}{3} + 4\bigg(\frac{1}{3}\bigg) + \frac{1}{3} - 4(0.5)(0.5) + 2(0.5)(0.5) - 4(0.5)(0.5) \\
+        = {}& E(X_1^2) + 4 E(X_2^2) + E(X_3^2) - 4E(X_1) E(X_2) \\
+        & + 2E(X_1) E(X_3) - 4E(X_2) E(X_3) \\
+        = {}& \frac{1}{3} + 4\left(\frac{1}{3}\right) + \frac{1}{3} - 4(0.5)(0.5) + 2(0.5)(0.5) - 4(0.5)(0.5) \\
         = {}& 2 - 1 + 0.5 - 1 \\
         = {}& \textbf{0.5}
     \end{align*}
@@ -680,6 +675,290 @@
     You don't have to understand the solution behind this question yet, this is just to demonstrate an example of how the distributive law can be applied. 
     
     \newpage
+    Certain algebraic expressions give us a consistent result when expanded.
+    
+    \begin{equation}
+        \begin{split}\label{eqn: (a+b)^2}
+        (a + b)^2 &= (a + b)(a + b)  \\
+        &= a^2 + ab + ba + b^2  \\
+        &= \bm{a^2 + 2ab + b^2} 
+        \end{split}
+    \end{equation}
+    
+    \begin{equation}\label{eqn: (a-b)^2}
+        \begin{split}
+        (a - b)^2 &= (a - b)(a - b) \\
+        &= a^2 + (-)ab + (-)ba + b^2 \\
+        &= \bm{a^2 - 2ab + b^2} 
+        \end{split}
+    \end{equation}
+    
+    \begin{equation}\label{eqn: (a+b)(a-b)}
+        \begin{split}
+            (a + b)(a - b) &= a^2 + (-)ab + ab + (-)b^2 \\
+            &= \bm{a^2 - b^2} 
+        \end{split}
+    \end{equation}
+    
+    \newpage
+    There are multiple ways to factorise algebraic expressions. Each of which approach the problem from a different perspective and may be more appropriate depending on the given expression. 
+    
+    \medskip
+    
+    For example:
+    
+    \begin{align*}
+        6x^3y^3 + 45x^2y^2 + 21xy = (3xy)(2x^2y^2 + 15xy +7)
+    \end{align*}
+    
+    The highest common factor of 6, 45 and 21 is 3. $xy$ may also be factored out, giving us $3xy$ as one factor. 
+    
+    \medskip
+    Of course, "eyeballing" it isn't always so easy, so we shall look at some other procedural ways or algorithms that make the process easier. 
+    
+    \begin{align*}
+        4x^2 - 9 &= (2x)^2 - (3)^2 & \\ 
+        &= \bm{(2x + 3)(2x - 3)} && \text{Using $a^2 - b^2 = (a + b)(a - b)$} &
+    \end{align*}
+    
+    First, we should always look out for \textbf{difference of squares} $(a^2 - b^2)$, or any of the other "special cases" that we dealt with in expansion of algebraic expressions. With more practice, you would gradually develop your ability to recognise these identities.
+    
+    \begin{align*}
+        x^4 - 16 &= (x^2)^2 - 4^2 \\
+        &= (x^2 + 4)\textcolor{sussred}{(x^2 - 4)} && \text{Using $a^2 - b^2 = (a + b)(a - b)$} & \\
+        &= \bm{(x^2 + 4) \textcolor{sussred}{(x + 4)(x - 4)}} && \text{Using $a^2 - b^2 = (a + b)(a - b)$ again} &
+    \end{align*}
+    
+    For trinomials (expressions with 3 terms):
+    
+    \begin{align*}
+        x^2 + 10x + 25 &= x^2 + 10x + 5^2 &\\
+        &= (x + 5)^2 && \text{Using $a^2 + 2ab + b^2 = (a + b)^2$} &
+    \end{align*}
+    
+    \begin{align*}
+        x^2 - 6x + 9 &= x^2 -6x + 3^2 & \\
+        &= (x - 3)^2 && \text{Using $a^2 - 2ab + b^2 = (a - b)^2$} &
+    \end{align*}
+    
+    \newpage
+    Of course, not every trinomial can be factored into squares. A more generalised method for factorisation is the \textbf{cross method}. 
+    
+    \medskip
+    Given $2x^2 - x - 15$,
+    
+    \begin{figure}[hb]
+        \centering
+        \setlength\extrarowheight{4pt}
+            \begin{tabulary}{\linewidth}{CCC|C}
+                \tikzmarknode{8a}{$2x$} & $+$ &\tikzmarknode{8c}{$5$} & $5x$ \\
+                \tikzmarknode{8b}{$x$} & $-$ &\tikzmarknode{8d}{$3$} & $-6x$ \\
+                \hline
+                $2x^2$ & $-$ & $15$ & $-x$
+            \end{tabulary}
+        \caption{Cross Method of Factorisation}
+        \label{fig:cross method factorisation}
+    \end{figure}
+    
+    Hence, 
+    \begin{equation*}
+        2x^2 - x - 15 = (2x + 3)(x - 5)
+    \end{equation*}
+    
+    \begin{tikzpicture}[remember picture, overlay]
+    \draw[->, sussred] (8a.south east) to (8d.north west);
+    \draw[->, sussred] (8b.north east) to (8c.south west);
+    
+    \end{tikzpicture}
+    
+    To start, we begin with a blank table.
+    
+    \begin{center}
+    \setlength\extrarowheight{4pt}
+    \begin{tabulary}{\linewidth}{CCC|C}
+        \hspace{5mm} & \hspace{5mm} & \hspace{5mm} & \hspace{5mm}\vspace{2.5mm} \\
+        {} & {} & {} & \vspace{2.5mm} \\
+        \hline
+        {} & {} & {} & \vspace{5mm}
+    \end{tabulary}    
+    \end{center}
+    
+    At the bottom left quadrant, we place the terms with a power of 2 and 0. The term with power 1 lies in the bottom right quadrant. Note that we include negative coefficients and not just their absolute values. 
+    
+    \begin{center}
+    \setlength\extrarowheight{4pt}
+    \begin{tabulary}{\linewidth}{CCC|C}
+         &  &  & \vspace{2.5mm} \\
+        {} & {} & {} & \vspace{2.5mm} \\
+        \hline
+        $2x^2$ & $-$ & $15$ & $-x$ 
+    \end{tabulary}    
+    \end{center}
+    
+    We then deduce what terms lie in the top left quadrant. To obtain $x^2$, both terms need to contain $x$ or one term needs to be $x^2$ and the other a ($1$). It should be clear that in order to obtain an $x$ term with power 1, we should not introduce a power 2 into our factors. To obtain a 2 in $2x^2$, the only possible values are 2 and 1. Therefore,
+    
+    \begin{center}
+    \setlength\extrarowheight{4pt}
+    \begin{tabulary}{\linewidth}{CCC|C}
+        2x &  &  &  \\
+        x & {} & {} & \\
+        \hline
+        $2x^2$ & $-$ & $15$ & $-x$ 
+    \end{tabulary}    
+    \end{center}
+    
+    To get $-15$, the possible factors are 1,15 and 3,5 and a negative sign in front of one of them (2 negatives is impossible as it would give us a positive value). Of course, we could trial and error this if we are unsure, but to save the trees lets assume that we chose 3,5 initially. Now the order in which we place 3 and 5 (top or bottom) matters, as you would soon see. Let's use a wrong example first. 
+    
+    \begin{center}
+    \setlength\extrarowheight{4pt}
+    \begin{tabulary}{\linewidth}{CCC|C}
+        2x & $-$ & 5 &  \\
+        x & + & 3 & \\
+        \hline
+        $2x^2$ & $-$ & $15$ & $-x$ 
+    \end{tabulary}    
+    \end{center}
+    
+    As the name suggests, we cross multiply the terms in the top left quadrant to obtain the values in the top right quadrant. The goal is to achieve 2 values which, when computed, give us the value in the bottom right quadrant ($-x$). 
+    
+    \begin{center}
+    \setlength\extrarowheight{4pt}
+    \begin{tabulary}{\linewidth}{CCC|C}
+        \tikzmarknode{9a}{2x} & $-$ & \tikzmarknode{9c}{5} & $-5x$ \\
+        \tikzmarknode{9b}{x} & + & \tikzmarknode{9d}{3} & $6x$ \\
+        \hline
+        $2x^2$ & $-$ & $15$ & $-x$ 
+    \end{tabulary}    
+    \end{center}
+    
+    \begin{tikzpicture}[remember picture, overlay]
+    \draw[->, sussred] (9a.south east) to (9d.north west);
+    \draw[->, sussred] (9b.north east) to (9c.south west);
+    
+    \end{tikzpicture}
+    
+    $-5x + 6x = x \neq -x$, hence this set of factors is not a valid solution. 
+    
+    \begin{center}
+        \setlength\extrarowheight{4pt}
+            \begin{tabulary}{\linewidth}{CCC|C}
+                \textcolor{sussred}{$2x$} & \textcolor{sussred}{$+$} & \textcolor{sussred}{$5$} & $5x$ \\
+                \textcolor{cyan}{$x$} & \textcolor{cyan}{$-$} & \textcolor{cyan}{$3$} & $-6x$ \\
+                \hline
+                $2x^2$ & $-$ & $15$ & $-x$
+            \end{tabulary}    
+    \end{center}
+    
+    Referring back to Figure \ref{fig:cross method factorisation}, we know what the correct values are. To finalise our factors, instead of taking the cross multiplication, we simply take the two horizontal expressions $(2x+5)(x-3)$. 
+    
+    \newpage
+    Now what if there are simply no possible solutions that we can derive with the cross method? Instead of trying to find a solution in the form of $(x + a)^2$, $(x + a)(x + b)$ or something similar, we can try to find a solution in the form of $(x + a)^2 + b$. This method is called \textbf{completing the square}. 
+    
+    \medskip
+    We begin with the simplest case of a monic polynomial, this is where the coefficient of the leading term in a polynomial is 1. i.e., ($x^2 + ax + b$). Recall that $(a + b)^2 = a^2 + 2ab + b^2$. For us to factorise a polynomial into $(x + a)^2$, we must ensure that the polynomial we have follows this format:
+    
+    \[ (x + a)^2 = x^2 + 2ax + a^2 \]
+    
+    For example:
+    
+    \begin{align*}
+       x^2 + 6x + 7 && \text{where $2a = 6$} 
+    \end{align*}
+    
+    To conform to the format, our constant value of $a^2$ would be:
+    
+    \begin{align*}
+        2a &= 6 \\
+        a &= \frac{6}{2} = 3 \\
+        a^2 &= 3^2
+    \end{align*}
+    
+    And to make things easier to compute, we will just casually slide in $3^2$ between $6x$ and 7, giving us:
+    
+    \[ x^2 + 6x + 3^2 + 7\]
+    
+    Because we added a value to the equation, the overall "value" of this equation changed. Hence we need to subtract this extra value to maintain the value of this equation. This gives:
+    
+    \[ x^2 + 6x + 3^2 + 7 - 3^2 \]
+    
+    Which we can now factorise and simplify into:
+    
+    \begin{align*}
+       \textcolor{sussred}{x^2 + 6x + 3^2} + 7 - 3^2 &= \textcolor{sussred}{(x + 3)^2} + 7 - 3^2 \\
+       &= \textcolor{sussred}{(x + 3)^2} + 7 - 9 \\
+       &= \bm{\textcolor{sussred}{(x + 3)^2} - 2} 
+    \end{align*}
+    
+    \newpage
+    Now that you understand the concept behind completing the square, here is a quicker shortcut. Note that I am now referring to the coefficient of $x$ as $b$ for clarity sake. 
+    
+    \[  x^2 + bx + \left( \frac{b}{2} \right)^2 = \left( x + \frac{b}{2} \right)^2 \]
+    
+    Given $x^2 + 10x + 8$, $b = 10$.
+    
+    \begin{align*}
+        x^2 + 10x + 8 &= \left(x + \frac{b}{2} \right)^2 + 8 - \left(\frac{b}{2}\right)^2 \\
+        &= \left(x + \frac{10}{2} \right)^2 + 8 - \left( \frac{10}{2} \right)^2 \\
+        &= (x + 5)^2 + 8 - 25 \\
+        &= \bm{(x + 5)^2 - 17}
+    \end{align*}
+    
+    What about non-monic polynomials, where the coefficient of $x^2 \neq 1$? In that case, we can simply divide the entire equation by the coefficient to ensure we get a monic polynomial. 
+    
+    \medskip
+    For example,
+    
+    \begin{align*}
+        3x^2 - 16x + 34 &= \frac{3x^2 - 16x + 34}{3} \\
+        &= x^2 - \frac{16}{3}x + \frac{34}{3} && \text{therefore, $b = \frac{16}{3}$} \\
+        &= \left( x - \frac{\frac{16}{3}}{2} \right)^2 + \frac{34}{3} - \frac{\frac{16}{3}}{2} \\
+        &= \left( x - \frac{16}{6} \right)^2 + \frac{34}{3} - \frac{16}{6} \\
+        &= \bm{\left( x - \frac{16}{6} \right)^2 + \frac{26}{3}}
+    \end{align*}
+    
+    We can also factor out the coefficient if possible. 
+    
+    \begin{align*}
+        2x^2 + 8x + 28 &= 2(x^2 + 4x + 14) \\
+        &= 2 \left[\left(x + \frac{4}{2} \right)^2 + 14 - \left(\frac{4}{2}\right)^2 \right] \\
+        &= 2[(x + 2)^2 + 14 - 2^2] \\
+        &= \bm{2[(x + 2)^2 + 10]}
+    \end{align*}
+    
+    We can also choose to factor out the coefficient from just the first 2 terms.
+    \begin{align*}
+        5x^2 - 25x + 12 &= 5(x^2 - 5x) + 12 \\
+        &= 5\left[\left(x - \frac{5}{2} \right)^2 - \left(\frac{5}{2} \right)^2 \right] + 12 \\
+        &= 5(x - 2.5)^2 - 5(2.5)^2 + 12 \\
+        &= 5(x - 2.5)^2 - 31.25 + 12 \\
+        &= \bm{5(x - 2.5)^2 - 19.25}
+    \end{align*}
+    
+    Generally, 
+    
+    \begin{equation}
+    ax^2 + bx + c = a(x + d)^2 + e 
+    \end{equation}
+    
+    Where,
+    
+    \[ d = \frac{b}{2a} \;\; \text{and} \;\; e = c - \frac{b^2}{4a} \]
+    
+    \medskip
+    The sum and difference of cubes can also be factored with their special identities.
+    
+    \begin{equation}
+    a^3 + b^3 = (a + b)(a^2 - ab + b^2)
+    \end{equation}
+    
+    \begin{equation}
+    a^3 - b^3 = (a - b)(a^2 + ab + b^2)
+    \end{equation}
+    
+    \subsection{Rational expressions}
+    Factorising is useful as they help simplify complicated expressions. This is especially so when working with rational expressions. A \textbf{rational expression} refers to a polynomial expression that exists within a fraction; or when we try to find the quotient of 2 different polynomial expressions. 
+    
+    
     
     
     \printbibliography
