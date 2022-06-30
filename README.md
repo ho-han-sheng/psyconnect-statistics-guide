@@ -10,8 +10,8 @@ This is a personal project to learn LaTeX and further cement my mathematical fou
 - [ ] Separate content into individual .tex files and use \include to collate into final book
 
 ### Documentation 
-- [ ] Issue Template  
-- [ ] Pull request template  
+- [x] Issue Template  
+- [x] Pull request template  
 - [x] Code of conduct  
 - [ ] Contributing guidelines
 - [x] Todo list on readme
