@@ -12,7 +12,7 @@ This is a personal project to learn LaTeX and further cement my mathematical fou
 ### Documentation 
 - [ ] Issue Template  
 - [ ] Pull request template  
-- [ ] Code of conduct  
+- [x] Code of conduct  
 - [ ] Contributing guidelines
 - [x] Todo list on readme
 - [ ] Update description for this project
