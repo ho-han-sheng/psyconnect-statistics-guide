@@ -7,7 +7,7 @@ We love your input! We want to make contributing to this project as easy and tra
 - Proposing new features
 - Becoming a maintainer
 
-## We Develop with Github
+## We develop with Github
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
 ## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
@@ -18,7 +18,7 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 3. Are there any errors that pop up? Resolve them first.
 4. Issue that pull request!
 
-## Any contributions you make will be under the GPL 3.0 License
+## Any contributions you make will be under the GPL 3.0 license
 In short, when you submit code changes, your submissions are understood to be under the same [GPL License](https://choosealicense.com/licenses/gpl-3.0/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report bugs using Github's [issues](https://github.com/ho-han-sheng/psyconnect-statistics-guide/issues)
@@ -26,7 +26,7 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 
 ## Write bug reports with detail, background, and sample code
 
-**Great Bug Reports** tend to have:
+**Great bug reports** tend to have:
 
 - A quick summary and/or background
 - Steps to reproduce
@@ -36,11 +36,14 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 - What actually happens
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
 
-## Use a Consistent Coding Style
+## Use a consistent coding style
 Follow the code styleguide (when it comes out...)
 
 ## License
 By contributing, you agree that your contributions will be licensed under its GPL license.
+
+## Code of conduct
+By contributing, you acknowledge and agree to abide by the contributor [code of conduct](https://github.com/ho-han-sheng/psyconnect-statistics-guide/blob/master/CODE_OF_CONDUCT.md)
 
 ## References
 This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebook/draft-js/blob/a9316a723f9e918afde44dea68b5f9f39b7d9b00/CONTRIBUTING.md)
