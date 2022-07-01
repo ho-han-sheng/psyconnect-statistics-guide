@@ -46,4 +46,4 @@ By contributing, you agree that your contributions will be licensed under its GP
 By contributing, you acknowledge and agree to abide by the contributor [code of conduct](https://github.com/ho-han-sheng/psyconnect-statistics-guide/blob/master/CODE_OF_CONDUCT.md)
 
 ## References
-This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebook/draft-js/blob/a9316a723f9e918afde44dea68b5f9f39b7d9b00/CONTRIBUTING.md)
+This document was adapted from [briandk's adaptation of the Facebook open-source contribution guidelines](https://gist.github.com/briandk/3d2e8b3ec8daf5a27a62)
